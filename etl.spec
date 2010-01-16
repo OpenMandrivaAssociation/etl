@@ -2,8 +2,8 @@
 
 Name:		etl
 Summary:	Template library for synfig
-Version:	0.04.12
-Release:	%mkrel 2
+Version:	0.04.13
+Release:	%mkrel 1
 Source0:	http://downloads.sourceforge.net/synfig/%{oname}-%{version}.tar.gz
 URL:		http://www.synfig.org
 License:	GPLv2+
