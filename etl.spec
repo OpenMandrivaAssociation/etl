@@ -1,17 +1,18 @@
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 %define oname	ETL
 %define devname	%mklibname %{name} -d
-
-%define	_enable_debug_packages	%{nil}
-%define debug_package		%{nil}
 
 Name:		etl
 Summary:	Template library for synfig
 Version:	0.04.15
-Release:	%mkrel 1
-Source0:	http://downloads.sourceforge.net/synfig/%{oname}-%{version}.tar.gz
-URL:		http://www.synfig.org
+Release:	2
 License:	GPLv2+
 Group:		Development/C++
+URL:		http://www.synfig.org
+Source0:	http://downloads.sourceforge.net/synfig/%{oname}-%{version}.tar.gz
+Patch0:		etl-0.04.15-cflags.patch
 
 %description
 Voria ETL is a multi-platform class and template library designed to
@@ -31,8 +32,10 @@ types and functions from the C++ Standard Template Library (STL).
 
 %prep
 %setup -q  -n %{oname}-%{version}
+%patch0 -p1
 
 %build
+autoreconf -fi
 %configure2_5x
 %make
 
@@ -41,9 +44,9 @@ types and functions from the C++ Standard Template Library (STL).
 %multiarch_binaries %{buildroot}%{_bindir}/ETL-config
 
 %files -n %{devname}
-%defattr(-,root,root)
 %doc AUTHORS README NEWS
 %{_bindir}/%{oname}-config
 %{multiarch_bindir}/%{oname}-config
 %{_includedir}/%{oname}
 %{_libdir}/pkgconfig/%{oname}.pc
+
