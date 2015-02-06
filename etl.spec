@@ -7,7 +7,7 @@
 Name:		etl
 Summary:	Template library for synfig
 Version:	0.04.15
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Development/C++
 URL:		http://www.synfig.org
