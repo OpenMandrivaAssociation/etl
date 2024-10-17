@@ -10,7 +10,7 @@ Version:	0.04.17
 Release:	2
 License:	GPLv2+
 Group:		Development/C++
-Url:		http://www.synfig.org
+Url:		https://www.synfig.org
 Source0:	http://downloads.sourceforge.net/synfig/%{oname}-%{version}.tar.gz
 Patch0:		etl-0.04.15-cflags.patch
 
