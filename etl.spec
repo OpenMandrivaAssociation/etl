@@ -14,6 +14,11 @@ Url:		https://www.synfig.org
 Source0:	http://downloads.sourceforge.net/synfig/%{oname}-%{version}.tar.gz
 Patch0:		etl-0.04.15-cflags.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Voria ETL is a multi-platform class and template library designed to add new
 data types and functions which combine well with the existing types and
